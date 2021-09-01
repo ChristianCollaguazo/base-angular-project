@@ -1,0 +1,10 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  & section:nth-child(3) {
+    margin-top: auto;
+  }
+}
+
+

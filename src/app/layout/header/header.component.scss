@@ -1,0 +1,152 @@
+@import "../../../assets/scss/bootstrap/scss/constants";
+@import "../../../assets/scss/mixins/respond-to";
+
+.body {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-lg {
+    flex-direction: row;
+  }
+
+  .header__logo {
+    padding: 0.5rem 2rem;
+    display: none;
+    @include respond-lg {
+      display: block;
+      width: 25%;
+    }
+    .cont-logo {
+      text-align: center;
+      height: 40px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .header__text {
+    color: white;
+    padding: 0.5rem 2rem;
+    @include respond-lg {
+      width: 75%;
+    }
+    .cont-text {
+      height: 40px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.2;
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: auto;
+      }
+    }
+  }
+}
+.global-header {
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 6%);
+}
+.navbar {
+  min-height: 100%;
+  justify-content: flex-end;
+  padding: 1rem 1rem;
+  z-index: 100;
+}
+.navbar-logo {
+  width: 100%;
+  position: relative;
+  height: 40px;
+  text-align: right;
+  @include respond-lg {
+    display: none;
+  }
+  .cont-logo {
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      height: 100%;
+    }
+  }
+  .navbar-toggler {
+    height: 40px;
+    border: none;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.navbar-collapse {
+  justify-content: center;
+  text-align: right;
+  margin-top: 0.5rem;
+  @include respond-lg {
+    margin-top: 0px;
+  }
+}
+
+.navbar-light .navbar-nav {
+  .nav-item {
+    cursor: pointer;
+    // @include respond-lg {
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      border-bottom: 3px solid $primary;
+    }
+    //}
+
+    .nav-link {
+      color: $primary;
+      text-decoration: none;
+      text-align: center;
+
+      @include respond-lg {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  &:hover .active {
+    // @include respond-lg {
+    border-bottom: none;
+    &:hover {
+      border-bottom: 3px solid $primary;
+    }
+    // }
+  }
+  .active {
+    // @include respond-lg {
+    border-bottom: 3px solid $secondary;
+    // }
+    .nav-link {
+      color: $secondary;
+    }
+  }
+}
+
+.border-red {
+  border-color: red !important;
+}
+/*
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+
+  &:hover {
+    border-bottom: 3px  solid $primary-color ;
+  }
+}
+*/

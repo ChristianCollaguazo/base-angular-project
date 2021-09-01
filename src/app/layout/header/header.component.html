@@ -1,1 +1,76 @@
-<p>header works!</p>
+<header class="title-text global-header">
+  <div class="header">
+    <div class="header__logo">
+      <div class="cont-logo">
+        <img
+          src="assets/img/logos/logo.png"
+          alt="logo de la página"
+          class="logo__img"
+        />
+      </div>
+    </div>
+    <div class="small-text header__text bg-primary">
+      <div class="cont-text">
+        <p class="">
+          <strong>Christian Collaguazo</strong>
+          <br />
+          Ing. Sistemas
+        </p>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul #navbarAdmin class="navbar-nav text-secondary">
+          <li
+            class="nav-item"
+            *ngFor="let rol of ['home', 'rol2']"
+            [routerLinkActive]="['active']"
+            [routerLink]="
+              '/' + (rol === 'transparencias' ? 'transparencia' : rol)
+            "
+          >
+            <a class="nav-link"
+              ><span>{{
+                rol === "transparencias" ? "Transparencia" : (rol | titlecase)
+              }}</span></a
+            >
+          </li>
+          <!-- <li class="nav-item" [routerLinkActive]="['active']" routerLink="/dashboard">
+            <a class="nav-link"><span>Dashboard</span></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" routerLink="/transparencia">
+            <a class="nav-link"><span>Transparencia</span></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" routerLink="/reclamos">
+            <a class="nav-link"><span>Reclamos</span></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" routerLink="/denuncias">
+            <a class="nav-link"><span>Denuncias</span></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" routerLink="/noticias">
+            <a class="nav-link"><span>Noticias</span></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" routerLink="/logros">
+            <a class="nav-link"><span>Logros</span></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" routerLink="/usuarios">
+            <a class="nav-link"><span>Usuarios</span></a>
+          </li> -->
+          <li
+            class="nav-item border-red"
+            [routerLinkActive]="['active']"
+            routerLink="/auth/sign-in"
+          >
+            <a class="nav-link text-danger"><span>Salir</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
