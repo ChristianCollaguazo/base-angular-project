@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class BaseProjectService {
-  BASE_URL = 'https://mtop-service.herokuapp.com/api';
-  // BASE_URL = 'http://localhost:8080/vitaapp/api/v1';
+
+  BASE_URL = 'http://localhost:8080';
   httpOptions = {
     headers: new HttpHeaders().set('Content-Type', 'application/json'),
   };
