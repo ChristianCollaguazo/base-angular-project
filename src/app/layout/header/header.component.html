@@ -28,7 +28,7 @@
         <ul #navbarAdmin class="navbar-nav text-secondary">
           <li
             class="nav-item"
-            *ngFor="let rol of ['home', 'rol2']"
+            *ngFor="let rol of ['home', 'page']"
             [routerLinkActive]="['active']"
             [routerLink]="
               '/' + (rol === 'transparencias' ? 'transparencia' : rol)
